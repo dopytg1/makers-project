@@ -45,4 +45,20 @@ while( i < 2 ){
         }
 };
 
+appData.moneyPerDay = appData.budget ;
+
+alert("Ежедневный бюджет" + appData.moneyPerDay)
+
+if ( appData.moneyPerDay < 100 ){
+    console.log ( "Минимальный достаток" );
+}else if( appData.moneyPerDay > 100 && appData.moneyPerDay < 2000 ){
+    console.log ( "Средний достаток" );
+}else if ( appData.moneyPerDay > 2000 ){
+    console.log( "Высокий достаток" );
+}else (){
+    console.log( "Что-то не так ");
+};
+
+
+
 
