@@ -1,6 +1,6 @@
 'use strict'
 
-let arr = [1, 2, 3, 4, 5];
+let arr = [1, 57, 26, 10, 14];
 
 let first = arr[1];
 let second = 0;

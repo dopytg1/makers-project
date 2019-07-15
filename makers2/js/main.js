@@ -59,14 +59,14 @@
 // var ask = +prompt('Напишите пожалуйста свой возраст'); //6
 // console.log(ask.typeof);
 
-// if(ask <= 13){
-// alert("adventure time");
-// }else if(ask == 14 || ask == 15 || ask == 16 || ask == 17){
-// alert("The lord of the rings");
-// }else if(ask >= 18){
-// alert("Game of throne");
-// }else if(ask.typeof === undefined || ask === "" || ask.typeof === NaN){
-// alert("произошла ошибка");
+// if (ask <= 13) {
+//     alert("adventure time");
+// } else if (ask == 14 || ask == 15 || ask == 16 || ask == 17) {
+//     alert("The lord of the rings");
+// } else if (ask >= 18) {
+//     alert("Game of throne");
+// } else if (ask.typeof === undefined || ask === "" || ask.typeof === NaN) {
+//     alert("произошла ошибка");
 // };
 
 
@@ -223,4 +223,3 @@
 //   }
 
 // console.log(array);
-
