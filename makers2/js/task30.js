@@ -11,7 +11,6 @@ function getUniqueElems(A) {
         if (A[i - 1] === A[i]) t = A[i - 1];
         if (A[i - 1] !== t) B[j++] = A[i - 1];
     }
-
     return B;
 }
 
