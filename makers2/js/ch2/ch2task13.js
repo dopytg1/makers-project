@@ -21,10 +21,6 @@ let ownProps = [];
 
 let hound = new dog2("bruce", "grey", 8);
 
-let puppy = new dog2("sharick", "white", 4);
-
-hound.__proto__ = puppy;
-console.log(hound.name);
 
 ownProps.push(hound.name, hound.color, hound.numLegs);
 console.log(ownProps);

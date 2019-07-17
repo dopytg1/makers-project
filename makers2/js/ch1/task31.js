@@ -67,7 +67,6 @@ const evaluate = (s) => {
         }
         totals.push(total);
     }
-
     return Math.min(...totals);
 }
 console.log(evaluate(notSoMagicSquare)); // 4
