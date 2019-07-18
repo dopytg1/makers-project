@@ -26,25 +26,26 @@ class Dog extends Animal {
 Dog.prototype.bork = function () {
     console.log(`${this.name} got woof`)
 }
-
-class Cat extends Animal {
+class CaBe extends Animal {  // cat and bear borks 
     constructor(name, numLegs) {
         super(name, numLegs);
     }
-
-    bork() {
-        console.log(`${this.name} got myau`)
+    bork(){
+        console.log(`graaa`);
     }
 }
-class Bear extends Animal {
+
+class Cat extends CaBe {
+    constructor(name, numLegs) {
+        super(name, numLegs);
+    }
+
+}
+class Bear extends CaBe {
     constructor(name, numLegs) {
         super(name, numLegs);
 
     }
-    bork() {
-        console.log(`${this.name} got vaur`)
-    }
-
 
 }
 
@@ -54,3 +55,4 @@ let murzick = new Cat("murzick");
 let sharick = new Dog("Sharick", "4");
 
 console.log(murzick.bork(), sharick.eat(), sharick.bork());
+
