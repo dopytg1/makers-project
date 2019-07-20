@@ -11,6 +11,6 @@ function returnNum(num1, num2){
     return arr;
 }
 
-console.log(returnNum(2,9));
+console.log(returnNum(1,11));
 
 

@@ -10,4 +10,4 @@ function findLetter(word, find) {
     return count;
 }
 
-console.log(findLetter("madam", "o"));
+console.log(findLetter("madam", "m"));
