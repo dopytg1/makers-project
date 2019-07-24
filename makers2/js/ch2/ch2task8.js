@@ -7,4 +7,4 @@ function toFahrenheit(c) {
     return F = 1.8 * c + 32;
 }
 
-console.log(toFahrenheit(5));
+console.log(toFahrenheit(47));

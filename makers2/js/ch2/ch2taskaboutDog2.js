@@ -27,7 +27,7 @@ Dog.prototype.bork = function () {
     console.log(`${this.name} gose woof`)
 }
 
-class CaBe extends Animal {  // cat and bear borks 
+class CaBe extends Animal {  //  borks of cat and bear 
     constructor(name, numLegs) {
         super(name,numLegs);
     }
@@ -54,6 +54,7 @@ class Bear extends CaBe {
 
 let murzick = new Cat("murzick");
 let sharick = new Dog("Sharick", "4");
+let vasia = new Bear("vasia", "4")
 
-console.log(murzick.bork(), sharick.eat(), murzick.sayLegs());
-
+console.log(murzick.eat());
+console.log(vasia.eat());
