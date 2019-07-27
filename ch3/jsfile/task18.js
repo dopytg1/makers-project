@@ -20,6 +20,8 @@ window.addEventListener("input", function () {
 
 btn.addEventListener("click", function (e) {
     e.preventDefault();
-    console.log(name.value);
-    console.log(password.value);
+    obj.username = name.value;
+    obj.userpasword = password.value;
+    console.log("");
+    console.log(obj);
 });

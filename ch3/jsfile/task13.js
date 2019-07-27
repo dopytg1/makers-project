@@ -7,6 +7,6 @@ let arr =  ['Купить хлеб', 'Сделать бутерброд', 'По�
 for(let i = 0; i < arr.length; i++) {
     let li = document.createElement("li");
     li.innerHTML = arr[i];
-    document.ol.appendChild(li);
+    ol.append(li);
 }
 

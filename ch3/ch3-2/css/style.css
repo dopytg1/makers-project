@@ -1,0 +1,22 @@
+.grid {
+    width: 200px;
+    text-align: center;
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr ; 
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+.section {
+    text-align: center;
+    display: flex;
+    
+}
+
+.div {
+    height: 200px;
+    width: 200px;
+    background: green;
+}
