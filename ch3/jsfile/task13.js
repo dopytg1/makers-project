@@ -9,4 +9,3 @@ for(let i = 0; i < arr.length; i++) {
     li.innerHTML = arr[i];
     ol.append(li);
 }
-

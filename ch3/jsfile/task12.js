@@ -1,7 +1,6 @@
 'use strict';
 
 window.addEventListener("resize", function() {
-    this.clearInterval
     let width = window.innerWidth;
     let height = window.innerHeight;
     this.console.log("");

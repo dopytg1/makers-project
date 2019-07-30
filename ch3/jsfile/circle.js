@@ -44,4 +44,6 @@ function drawCircle(circles) {   // функций вывода кругов в 
     return arr; 
 }
 
+
+
 drawCircle(20);

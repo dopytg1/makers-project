@@ -1,85 +1,74 @@
 'use strict';
 
-let code = document.querySelector(".code"),
-    flag = document.querySelector(".flag"),
-    name = document.querySelector(".name"),
-    capital = document.querySelector(".capital"),
-    population = document.querySelector(".population"),
-    grid = document.querySelector(".grid");
+let code = document.querySelector("#code"),
+    flag = document.querySelector("#flag"),
+    name = document.querySelector("#name"),
+    capital = document.querySelector("#capital"),
+    population = document.querySelector("#population"),
+    grid = document.querySelector(".grid"),
+    scrollUp = document.querySelector(".scroll__up"),
+    input__text = document.querySelector(".input__text"),
+    input__btn = document.querySelector(".input__btn");
 
-
-function main(num) {
-
-    for (let i = 0; i < num.length; i++) {
-
-    }
-
-}
-fetch("https://restcountries.eu/rest/v2/name/canada")
-    .then(response => response.json())
+fetch("https://restcountries.eu/rest/v2/all")
+    .then(responce => responce.json())
     .then(body => {
-        let cioc = body[0].cioc;
-        code.append(cioc);
+        body.map(item => {
+            let div = document.createElement("div");
+            let p = document.createElement("p");
+            let img = document.createElement("img");
+            img.setAttribute("src", item.flag);
+            p.append(img);
+            img.style.width = "200px";
+            div.append(p);
+            flag.append(div);
+            console.log(item.name);
+        })
+        body.map(item => {
 
-        let img = document.createElement("img");
-        img.setAttribute("src", body[0].flag);
-        flag.append(img);
-        img.style.width = "200px";
+            let div = document.createElement("div");
+            let p = document.createElement("p");
+            div.append(p);
+            p.innerHTML = item.alpha2Code;
+            code.append(div);
 
-        name.append(body[0].name);
+        })
+        body.map(item => {
+            let div = document.createElement("div");
+            let p = document.createElement("p");
+            div.append(p);
+            p.innerHTML = item.name;
+            name.append(div);
+            input__btn.addEventListener("click", () => {
+                for (let i = 0; i < 250; i++) {
+                    if (p.textContent == input__text.value) {
+                        p.scrollIntoView();
+                    }
+                }
+            })
+        })
+        body.map(item => {
+            let div = document.createElement("div");
+            let p = document.createElement("p");
+            div.append(p);
+            p.innerHTML = item.capital;
+            capital.append(div);
 
-        capital.append(body[0].capital);
+        })
+        body.map(item => {
+            let div = document.createElement("div");
+            let p = document.createElement("p");
+            div.append(p);
+            p.innerHTML = item.population;
+            population.append(div);
 
-        population.append(body[0].population);
-
+        })
         console.log(body);
     })
-    .catch(console.error())
+    
+    .catch(err => console.log("error"));
 
-let arr = [];
-
-fetch("https://restcountries.eu/rest/v2/name/usa")
-    .then(response => response.json())
-    .then(body => {
-        function createDiv(num) {
-            for (let i = 0; i < 10; i++) {
-                let div = document.createElement("div");
-                div.setAttribute("class", "div");
-                arr.push(div);
-                grid.append(div);
-                let p = document.createElement("p");
-
-
-                let img = document.createElement("img");
-                img.setAttribute("src", body[0].flag);
-                div.append(img);
-                img.style.width = "200px";
-
-                p.append(body[0].name);
-                p.append(body[0].capital);
-                div.append(p);
-
-            }
-
-            // let cioc = body[0].cioc;
-            // p[0].append(cioc);
-
-            // let img = document.createElement("img");
-            // img.setAttribute("src", body[0].flag);
-            // flag.append(img);
-            // img.style.width = "200px";
-
-            // name.append(body[0].name);
-
-            // capital.append(body[0].capital);
-
-            // population.append(body[0].population);
-
-            // console.log(body);
-
-        }
-
-        createDiv();
-
-    })
-    .catch(console.error())
+scrollUp.addEventListener("click", function () {
+    window.scrollTo(0, 0);
+    console.log("hello world");
+});

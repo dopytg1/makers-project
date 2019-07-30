@@ -12,7 +12,7 @@ let name = document.querySelector(".username"),
     }
 
 window.addEventListener("input", function () {
-    if (name.value.length > 6 && password.value.length > 6) {
+    if (name.value.length >= 6 && password.value.length >= 6) {
         btn.removeAttribute('disabled');
     }
 });
@@ -23,5 +23,6 @@ btn.addEventListener("click", function (e) {
     obj.username = name.value;
     obj.userpasword = password.value;
     console.log("");
-    console.log(obj);
+    // console.log(obj);
+    console.log(name.value);
 });
