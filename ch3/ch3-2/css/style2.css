@@ -6,7 +6,12 @@
     top: 0;
     display: grid;
     grid-template-rows: 1fr;
-    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+}
+
+.pokemons p {
+    font-size: 30px;
+    color: black;
 }
 
 .window {

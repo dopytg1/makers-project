@@ -22,7 +22,7 @@ fetch("https://restcountries.eu/rest/v2/all")
             img.style.width = "200px";
             div.append(p);
             flag.append(div);
-            console.log(item.name);
+            
         })
         body.map(item => {
 
@@ -63,9 +63,8 @@ fetch("https://restcountries.eu/rest/v2/all")
             population.append(div);
 
         })
-        console.log(body);
     })
-    
+
     .catch(err => console.log("error"));
 
 scrollUp.addEventListener("click", function () {

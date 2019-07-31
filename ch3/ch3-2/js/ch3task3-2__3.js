@@ -21,7 +21,7 @@ fetch("https://pokeapi.co/api/v2/pokemon/")
             p.addEventListener("click", (e) => {
                 e.preventDefault();
                 modalWindow.style.display = "block";
-
+                window.scrollTo(0,0);
                 for (let i = 0; i < body.results.length; i++) {
 
                     if (body.results[i].name != p.textContent) {
@@ -31,7 +31,7 @@ fetch("https://pokeapi.co/api/v2/pokemon/")
                     }
 
                 }
-                if(modalWindow.children.length > 1){
+                if (modalWindow.children.length > 1) {
                     modalWindow.children[2].remove();
                     modalWindow.children[1].remove();
                     modalWindow.children[1].remove();
@@ -40,33 +40,33 @@ fetch("https://pokeapi.co/api/v2/pokemon/")
                 fetch(`https://pokeapi.co/api/v2/pokemon/${countIt}`)
                     .then(resolved => resolved.json())
                     .then(body => {
-                        
+
 
                         var name = document.createElement("h3");
                         name.innerHTML = "name: " + body.name;
                         modalWindow.append(name);
-                        name.style.fontSize = "25px";
+                        name.style.fontSize = "35px";
 
                         var height = document.createElement("p");
                         height.innerHTML = "height: " + body.height;
                         modalWindow.append(height);
-                        height.style.fontSize = "30px";
+                        height.style.fontSize = "35px";
 
                         var id = document.createElement("p");
                         id.innerHTML = "id: " + body.id;
                         modalWindow.append(id);
-                        id.style.fontSize = "30px";
-                        
+                        id.style.fontSize = "35px";
+
                     })
 
                     .catch(err => console.log(err));
 
             })
-           
+
 
             img.addEventListener("click", (e) => {
                 e.preventDefault();
-                
+
                 modalWindow.style.display = "none";
             })
         })

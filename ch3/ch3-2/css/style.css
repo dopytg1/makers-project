@@ -1,10 +1,14 @@
+body {
+    min-width:900px ;
+}
+
 .grid {
     text-align: center;
     display: grid;
     margin: 0 auto;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr ; 
-
+    
 }
 
 .section {
@@ -22,7 +26,7 @@ p {
 div {
     height: 200px;
     width: 200px;
-    
+    border: 1px solid black;
 }
 
 .input__text {
@@ -45,4 +49,15 @@ div {
 
 .div {
     background: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+#code {
+    border: none;
+}
+.div {
+
 }
