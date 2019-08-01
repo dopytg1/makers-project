@@ -3,8 +3,6 @@ import React, { Component } from 'react';
 import User from "./Component/User";
 
 
-
-
 class App extends Component {
   state = {
     person: [{
@@ -32,6 +30,7 @@ class App extends Component {
             key={index}
             name={item.name}
             age={item.age}
+
             deletePerson={() => this.deletePerson(index)}
         />
           )

@@ -32,9 +32,10 @@ fetch("https://pokeapi.co/api/v2/pokemon/")
 
                 }
                 if (modalWindow.children.length > 1) {
+                    modalWindow.children[1].remove();
                     modalWindow.children[2].remove();
                     modalWindow.children[1].remove();
-                    modalWindow.children[1].remove();
+                    // 
                 }
                 console.log(modalWindow.children);
                 fetch(`https://pokeapi.co/api/v2/pokemon/${countIt}`)
