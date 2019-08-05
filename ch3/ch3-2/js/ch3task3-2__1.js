@@ -6,7 +6,7 @@ let countryName = document.querySelector("#name"),
     countryCapital = document.querySelector("#capital"),
     countryFlag = document.querySelector("#flag");
 
-let country = prompt("select your country","");
+let country = prompt("Choose your country","");
 
 fetch('https://restcountries.eu/rest/v2/name/' + country)
     .then(response => response.json())

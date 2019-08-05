@@ -9,16 +9,19 @@
 
 img {
     width: 200px;
+    height: 145px;
 }
 
 p {
     font-size: 25px;
     font-family: Arial, Helvetica, sans-serif;
     color: black;
+    align-items: center;
+    text-align: center;
 }
 
 div {
-    height: 200px;
+    height: 145px;
     width: 200px;
     border: 1px solid black;
     align-items: center;
@@ -37,13 +40,16 @@ div {
 
 
 .deleteBtn {
-    transform: scale(1.5);
+    width: 200px;
+    height: 30px;
+    position: absolute;
+    top: 0;
     text-decoration: none;
     border: none;
 }
 
 .deleteBtn:hover {
-    transform: scale(2);
+    transform: scale(1.2);
     
 }
 
@@ -85,5 +91,39 @@ div {
     background: orange;
     text-decoration: none;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
+}
+
+.modalBtn {
+    text-decoration: none;
+    border: none;
+    position: absolute;
+    width: 200px;
+    height: 30px;
+    top: 35px;
+}
+
+.modalBtn:hover {
+    transform: scale(1.2);
+}
+
+.btns {
+    position: relative;
+    border: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+
+/* .sortInp {
+    /* position: absolute;
+    top: 50px;
+    right: 300px; */
+/* } */ 
+
+.sort {
+    position: absolute;
+    top: 50px;
+    right: 300px;
+    border: none;
 }

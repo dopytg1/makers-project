@@ -1,7 +1,6 @@
 import React from "react";
 
 import "./Component.css"
-import "../img/Без названия.png"
 
 class CountryComponent extends React.Component {
     state = {
@@ -53,19 +52,22 @@ class CountryComponent extends React.Component {
                     <div className="flag">
                         <img alt="flag" src={this.props.data.flag}></img>
                     </div>
-    
+
                     <div className="name">
                         <p>{this.props.data.name}</p>
                     </div>
-    
+
                     <div className="capital">
                         <p>{this.props.data.capital}</p>
                     </div>
-    
+
                     <div className="population">
                         <p>{this.props.data.population}</p>
-                        <button onClick={this.props.deleteCountrie} className="deleteBtn">Delete</button>
-                        <button onClick={this.toggleShow} className="deleteBtn">Get info</button>
+                        <div className="btns">
+                            <button onClick={this.props.deleteCountrie} className="deleteBtn">Delete</button>
+                            <button onClick={this.toggleShow} className="modalBtn">Get info</button>
+                        </div>
+
                     </div>
                 </div>
             </section>

@@ -69,5 +69,4 @@ fetch("https://restcountries.eu/rest/v2/all")
 
 scrollUp.addEventListener("click", function () {
     window.scrollTo(0, 0);
-    console.log("hello world");
 });
